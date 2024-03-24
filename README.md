@@ -1,6 +1,4 @@
-# DFA_Minimizer
-
-# **DFA Minimizer**
+# **DFA_Minimizer**
 
 ## **Team Members:** 
 **Mahmoud Youssry Al Adly**
@@ -19,10 +17,13 @@ Output Format: The output format consists of the minimized DFA, which has fewer 
 
 ## **Inside Mechanism:**
 The code is built on the Hopcroft's Algorithm. Hopcroft's algorithm is works by partitioning the states of the DFA into classes, then merging them according to the states of the DFA. Following the steps below: 
-1. Starts with an initial partition that differs between the accepting and non-accepting states.
-2. Refining the partition by splitting the groups of the states depending on their transitions.
+1. Starts with an initial partition that divides the set of states into two, accepting and non-accepting states, where the initial state is defined as p0.
+2. Refining the partition by: iterating through each set in the partition (Pk-1), and check if the pairs of states are distinguishable based on their transition.
 3. Loop through the splitting until no further splitting is possible.
+4. Check for convergence by comparing Pk with Pk-1
+5. Construct Minimized DFA (minimized_dfa), where all the states within each set in Pk are merged into one state in the minimized DFA. 
+
 
 
 ## **Programming Language, Tools & Libraries used:**
-Python, jupyter, anaconda and no libraries used.
+Python, jupyter, anaconda and no libraries were used.
